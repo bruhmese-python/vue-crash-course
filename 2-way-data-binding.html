@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+			<!--Script Link  put befor end of </body> -->
+		    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>First_vue_app</title>
+	</head>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" charset="utf-8"></script>
+	<div id="app">
+		<!--<a :href="url" target="_blank">{{url}}</a>
+		<h1 data="dynamicId">{{dynamicId}}</h1>-->
+
+		<div class="rendered-form container-fluid">
+		    <div class="formbuilder-text form-group field-text-1697696966604">
+			<label for="text-1697696966604" class="formbuilder-text-label">Text Field</label>
+			<input v-model="options" type="text" class="form-control" name="text-1697696966604" access="false" id="text-1697696966604">
+		    </div>
+		    <div class="formbuilder-checkbox-group form-group field-checkbox-group-1697696975756">
+			<label for="checkbox-group-1697696975756" class="formbuilder-checkbox-group-label">Checkbox Group</label>
+			<div class="checkbox-group">
+			    <div class="formbuilder-checkbox">
+				<input v-model="options" name="checkbox-group-1697696975756[]" access="false" id="checkbox-group-1697696975756-0" value="option-1" type="checkbox" checked="checked">
+				<label for="checkbox-group-1697696975756-0">Option 1</label>
+			    </div>
+			    <div class="formbuilder-checkbox">
+				<input v-model="options" name="checkbox-group-1697696975756[]" access="false" id="checkbox-group-1697696975756-1" value="option-2" type="checkbox" checked="checked">
+				<label for="checkbox-group-1697696975756-1">Option 2</label>
+			    </div>
+			    <div class="formbuilder-checkbox">
+				<input v-model="options" name="checkbox-group-1697696975756[]" access="false" id="checkbox-group-1697696975756-2" value="option-3" type="checkbox" checked="checked">
+				<label for="checkbox-group-1697696975756-2">Option 3</label>
+			    </div>
+			</div>
+		    </div>
+		    <div class="">
+			<p access="false" id="control-7500057">You clicked on :&nbsp;{{options.join(', ')}}</p>
+		    </div>
+		</div>
+
+	</div>	
+	<script charset="utf-8">
+		new Vue ({
+				el: '#app',
+				data: {
+				options:[],
+				dynamicId: 30,
+				url:'https://edwindiaz.com' 
+			}
+		})	
+	</script>
+</html>

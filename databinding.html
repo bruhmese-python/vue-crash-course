@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>First_vue_app</title>
+	</head>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" charset="utf-8"></script>
+	<div id="app">
+		<a :href="url" target="_blank">{{url}}</a>
+		<h1 data="dynamicId">{{dynamicId}}</h1>
+	</div>	
+	<script charset="utf-8">
+		new Vue ({
+			el: '#app',
+			data: {
+			dynamicId: 30,
+				url:'https://edwindiaz.com' 
+			}
+		})	
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>directives demo</title>
+	</head>
+	<style type="text/css" media="screen">
+		.c1 {
+			color:red
+		}
+		.c2 {
+			color:green
+		}
+	</style>
+	<body>
+		<div id="app" >
+			<button @click="plus_size">increase</button>
+			<button @click="dec_size">decrease</button>
+			<div :style="{fontSize:fsize + 'px'}">
+				{{message}}
+			</div>
+		</div>
+		<script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+		<script charset="utf-8">
+			new Vue ({
+				el:'#app',
+				data: {
+					truth:true,
+					number:10,
+					fsize:80,
+					message: 'Hello'
+				},
+				methods: {
+					plus_size(){
+						this.fsize+=10;
+					},
+					dec_size(){
+						this.fsize-=10;
+					}
+				}
+			})	
+		</script>
+	</body>
+</html>

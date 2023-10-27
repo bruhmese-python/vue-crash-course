@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>directives demo</title>
+	</head>
+	<body>
+		<div id="app" >
+			<p :style="{color:fcolor, fontSize:fsize + 'px'}"> {{message}} </p>
+			<input type="text" v-model="fsize" value="" name="" id=""/>
+			<input type="color" v-model="fcolor" id="favcolor" name="favcolor">
+			<p :style="[styleobject, {fontSize:(fsize/2) + 'px'}]">styled using styleobject</p>
+		</div>
+		<script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+		<script charset="utf-8">
+			new Vue ({
+				el:'#app',
+				data: {
+					number:10,
+					fsize:80,
+					fcolor:'#ff0000',
+					url: 'https://youtube.com',
+					message: 'Hello',
+					styleobject :{
+						color:'blue' ,
+						textShadow : "3px 5px yellow"
+					}
+				}
+			})	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>directives demo</title>
+	</head>
+	<body>
+		<div id="app" >
+			<ul>
+				<li v-for="post in posts" :key="post.id">{{post.title}}</li>
+			</ul>
+		</div>
+		<script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+		<script charset="utf-8">
+			new Vue ({
+				el:'#app',
+				data: {
+					posts:[
+						{id:1, title:'back in my day', body: 'lorem ipsum dialogues'},
+						{id:2, title:'another blog post perhaps', body: 'simple body to type into the div'}
+					]
+				}
+			})	
+		</script>
+	</body>
+</html>
