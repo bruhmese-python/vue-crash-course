@@ -24,23 +24,29 @@ noremap  b :b
 noremap  q :q
 noremap  w :w
 nnoremap ; A;
-nnoremap F ?
-xnoremap F ?
 onoremap F ?
-nmap Q gq
-xmap Q gq
+xnoremap F ?
+nnoremap F ?
+snoremap F ?
 omap Q gq
-nnoremap T :tabnew %
-xnoremap T :tabnew %
+xmap Q gq
+nmap Q gq
+smap Q gq
 onoremap T :tabnew %
-nnoremap \ :split
-xnoremap \ :split
+xnoremap T :tabnew %
+nnoremap T :tabnew %
+snoremap T :tabnew %
 onoremap \ :split
-nnoremap f /
-xnoremap f /
+xnoremap \ :split
+nnoremap \ :split
+snoremap \ :split
 onoremap f /
-nmap gx <Plug>NetrwBrowseX
+xnoremap f /
+nnoremap f /
+snoremap f /
 xmap gx <Plug>NetrwBrowseXVis
+nmap gx <Plug>NetrwBrowseX
+smap gx <Plug>NetrwBrowseXVis
 noremap | :vsplit
 snoremap <C-R> "_c
 snoremap <silent> <C-H> "_c
@@ -95,7 +101,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd /media/admin/New\ Volume/prog_stuff_vue
+cd /media/admin/New\ Volume/vue-crash-course
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -123,16 +129,16 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 27 + 29) / 58)
-exe '2resize ' . ((&lines * 28 + 29) / 58)
-exe 'vert 2resize ' . ((&columns * 70 + 105) / 211)
-exe '3resize ' . ((&lines * 28 + 29) / 58)
-exe 'vert 3resize ' . ((&columns * 70 + 105) / 211)
-exe '4resize ' . ((&lines * 28 + 29) / 58)
-exe 'vert 4resize ' . ((&columns * 69 + 105) / 211)
+exe '1resize ' . ((&lines * 11 + 14) / 28)
+exe '2resize ' . ((&lines * 14 + 14) / 28)
+exe 'vert 2resize ' . ((&columns * 33 + 50) / 100)
+exe '3resize ' . ((&lines * 14 + 14) / 28)
+exe 'vert 3resize ' . ((&columns * 32 + 50) / 100)
+exe '4resize ' . ((&lines * 14 + 14) / 28)
+exe 'vert 4resize ' . ((&columns * 33 + 50) / 100)
 argglobal
-terminal ++curwin ++cols=211 ++rows=27 
-let s:term_buf_2 = bufnr()
+terminal ++curwin ++cols=100 ++rows=11 
+let s:term_buf_3 = bufnr()
 balt inline-styles.html
 setlocal keymap=
 setlocal noarabic
@@ -258,7 +264,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 13) / 27)
+let s:l = 1 - ((0 * winheight(0) + 5) / 11)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -400,13 +406,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 39 - ((4 * winheight(0) + 14) / 28)
+let s:l = 39 - ((3 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 39
 normal! 033|
-lcd /media/admin/New\ Volume/prog_stuff_vue
 wincmd w
 argglobal
 if bufexists("~/.vim/bundle/vim-snippets/UltiSnips/html.snippets") | buffer ~/.vim/bundle/vim-snippets/UltiSnips/html.snippets | else | edit ~/.vim/bundle/vim-snippets/UltiSnips/html.snippets | endif
@@ -535,7 +540,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 99 - ((5 * winheight(0) + 14) / 28)
+let s:l = 99 - ((4 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -678,25 +683,29 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 14) / 28)
+let s:l = 1 - ((0 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 12
-normal! 016|
+keepjumps 1
+normal! 0
 wincmd w
 2wincmd w
-exe '1resize ' . ((&lines * 27 + 29) / 58)
-exe '2resize ' . ((&lines * 28 + 29) / 58)
-exe 'vert 2resize ' . ((&columns * 70 + 105) / 211)
-exe '3resize ' . ((&lines * 28 + 29) / 58)
-exe 'vert 3resize ' . ((&columns * 70 + 105) / 211)
-exe '4resize ' . ((&lines * 28 + 29) / 58)
-exe 'vert 4resize ' . ((&columns * 69 + 105) / 211)
+exe '1resize ' . ((&lines * 11 + 14) / 28)
+exe '2resize ' . ((&lines * 14 + 14) / 28)
+exe 'vert 2resize ' . ((&columns * 33 + 50) / 100)
+exe '3resize ' . ((&lines * 14 + 14) / 28)
+exe 'vert 3resize ' . ((&columns * 32 + 50) / 100)
+exe '4resize ' . ((&lines * 14 + 14) / 28)
+exe 'vert 4resize ' . ((&columns * 33 + 50) / 100)
 tabnext 1
+badd +1 2-way-data-binding.html
+badd +0 inline-styles.html
+badd +0 /media/admin/New\ Volume/prog_stuff_vue
+badd +99 ~/.vim/bundle/vim-snippets/UltiSnips/html.snippets
+badd +0 ~/.vim/bundle/vim-snippets/UltiSnips/snippets.snippets
 badd +12 /media/admin/New\ Volume/prog_stuff_vue/inline-styles.html
 badd +40 /media/admin/New\ Volume/prog_stuff_vue/2-way-data-binding.html
-badd +99 ~/.vim/bundle/vim-snippets/UltiSnips/html.snippets
 badd +45 /media/admin/New\ Volume/prog_stuff_vue/.snippets
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
@@ -709,6 +718,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
